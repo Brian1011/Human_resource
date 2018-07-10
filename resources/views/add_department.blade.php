@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: Brian Mutinda
  * Date: 09/07/2018
- * Time: 09:49 AM
+ * Time: 05:47 PM
  */
 ?>
 
@@ -44,20 +44,21 @@
                 </div>
                 @endif
 
-                <form method="post" action="" >
+                <form method="post" action="/add/department">
                     {{csrf_field()}}
                     <div class="form-group">
-                        <input type="text" placeholder="Department Name" name="name" class="form-control" value="{{$department->department_name or ''}}" required>
+                        <input type="text" placeholder="Department Name" name="dep_name" class="form-control" value="{{$department->department_name or ''}}" required>
                     </div>
 
                     <div class="form-group">
-                        <input type="email" placeholder="Department Head" name="email" class="form-control" value="{{$department->department_head or ''}}" required>
+                        <input type="text" placeholder="Department Head" name="dep_head" class="form-control" value="{{$department->department_head or ''}}" required>
                     </div>
 
-                    <input type="hidden" name="dep_id" value="{{$department->department_name or ''}}">
+                    <input type="hidden" name="dep_id" value="{{$department->id or ''}}">
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
+
                 </form>
             </center>
         </div>

@@ -22,7 +22,7 @@
 
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="/">Homepage</a>
+            <a class="navbar-brand" href="/home">Homepage</a>
         </div>
 
         <ul class="nav navbar-nav">
@@ -40,8 +40,8 @@
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Departments
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="{{'/Managers'}}">All Departments</a> </li>
-                            <li><a href="{{'/ManagerForm'}}">Add Department</a> </li>
+                            <li><a href="{{'/home'}}">All Departments</a> </li>
+                            <li><a href="{{'/add/department'}}">Add Department</a> </li>
                         </ul>
                     </li>
         </ul>

@@ -15,48 +15,52 @@
 </head>
 
 <body>
-<!--the navigation bar-->
-@include('navigation')
 
 <div class="container">
     <div class="row">
-        <div class="col-lg-4"></div>
+        <div class="col-lg-3"></div>
 
-        <div class="col-lg-4">
-            <center>
-                <h1>Login</h1>
+        <div class="col-lg-6" style="margin-top: 10%;">
+            <div class="panel panel-default">
+                <div class="panel-heading">Login</div>
+                <div class="panel-body">
+                    <center>
+                        <h1>Login</h1>
 
-                <!--Check for sucess message-->
-                @if(session()->has('message'))
-                    <div class="alert alert-danger">
-                        {{session()->get('message')}}
-                    </div>
-                @endif
+                        <!--Check for sucess message-->
+                        @if(session()->has('message'))
+                            <div class="alert alert-danger">
+                                {{session()->get('message')}}
+                            </div>
+                        @endif
 
-                @if(session()->has('message_logout'))
-                    <div class="alert alert-success">
-                        {{session()->get('message_logout')}}
-                    </div>
-                @endif
+                        @if(session()->has('message_logout'))
+                            <div class="alert alert-success">
+                                {{session()->get('message_logout')}}
+                            </div>
+                        @endif
 
-                <form method="post" action="/login" enctype="multipart/form-data">
-                    {{csrf_field()}}
-                    <div class="form-group">
-                        <input type="text" placeholder="Email" name="email" class="form-control" required>
-                    </div>
+                        <form method="post" action="/login" enctype="multipart/form-data">
+                            {{csrf_field()}}
+                            <div class="form-group">
+                                <input type="text" placeholder="Email" name="email" class="form-control" required>
+                            </div>
 
-                    <div class="form-group">
-                        <input type="password" placeholder="Password" name="password" class="form-control" required><br>
-                    </div>
+                            <div class="form-group">
+                                <input type="password" placeholder="Password" name="password" class="form-control" required><br>
+                            </div>
 
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary">Login</button>
-                    </div>
-                </form>
-            </center>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-lg btn-primary">Login</button>
+                            </div>
+                        </form>
+                    </center>
+                </div>
+            </div>
+
         </div>
 
-        <div class="col-lg-4"></div>
+        <div class="col-lg-3"></div>
     </div>
 </div>
 
